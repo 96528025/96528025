@@ -1,70 +1,103 @@
-## Systems & Distributed Computing
+## Hi, I'm Freja
+
+I build backend systems, AI agents, real-time data pipelines, and small tools that turn messy workflows into usable software.
+
+My strongest interests are distributed systems, data infrastructure, applied AI, ads/recommendation systems, and practical automation.
+
+---
+
+## Featured Projects
+
+| Project | What it is | Stack | Why it matters |
+|---------|------------|-------|----------------|
+| [**distributed-kv**](https://github.com/96528025/distributed-kv) | Distributed key-value store with replication, failover, and transaction support | Python, Raft, AWS | Per-shard Raft consensus, 2PC multi-key transactions, 56 passing tests |
+| [**AdPulse**](https://github.com/96528025/AdPulse) | Real-time ad clickstream analytics and fraud signal pipeline | Go, Kafka | Streaming analytics inspired by modern ads monetization systems |
+| [**publishsafe**](https://github.com/96528025/publishsafe) | Privacy-preserving video publishing toolkit | Python, computer vision | Person tracking, segmentation blur, and avatar overlays for safer video sharing |
+| [**foodbank-forge**](https://github.com/96528025/foodbank-forge) | Natural-language tool generator for food bank data workflows | Python, Redis, OpenAI, Claude | Converts plain-language requests into usable data query tools |
+| [**realtime-clickstream-pipeline**](https://github.com/96528025/realtime-clickstream-pipeline) | End-to-end streaming pipeline for e-commerce events | Python, Kafka, SQLite | Processes standardized event streams with geographic and session analytics |
+| [**spring-ai-knowledge-assistant**](https://github.com/96528025/spring-ai-knowledge-assistant) | GenAI document Q&A assistant | Java 21, Spring Boot 3, OpenAI API | Provider-abstracted AI client with mockable testing architecture |
+
+---
+
+## Systems & Infrastructure
 
 | Project | Description | Tech | Highlights |
 |---------|-------------|------|------------|
-| [**distributed-kv**](https://github.com/96528025/distributed-kv) | Production-grade distributed key-value store | Python, Raft, AWS | Per-shard Raft consensus (CockroachDB/TiKV architecture); 2PC multi-key transactions; 41.5 msg/sec at 50 concurrent users; 56 tests, 100% pass |
-| [**distributed-system**](https://github.com/96528025/distributed-system) | Highly available web service across 3 AWS regions | Python, AWS EC2, Route 53 | Round Robin load balancer; Route 53 health checks from 8 global locations every 30s; zero-downtime auto-failover |
+| [**distributed-kv**](https://github.com/96528025/distributed-kv) | Production-grade distributed key-value store | Python, Raft, AWS | Per-shard Raft consensus, 2PC multi-key transactions, 41.5 msg/sec at 50 concurrent users |
+| [**distributed-system**](https://github.com/96528025/distributed-system) | Highly available web service across 3 AWS regions | Python, AWS EC2, Route 53 | Health-checked regional failover with zero-downtime routing |
+| [**TinyCache**](https://github.com/96528025/TinyCache) | Beginner-friendly in-memory cache | C++ | Backend and systems programming concepts in a compact project |
+| [**vm-cluster-project**](https://github.com/96528025/vm-cluster-project) | Local 3-node virtual server cluster | Vagrant, Parallels, Ubuntu | DevOps and virtualization practice on Apple Silicon |
+| [**llm-serving-infra-simulator**](https://github.com/96528025/llm-serving-infra-simulator) | LLM serving infrastructure simulator | Python | Experiments with serving behavior, routing, and infrastructure tradeoffs |
+| [**advanced-llm-serving-infra**](https://github.com/96528025/advanced-llm-serving-infra) | Advanced LLM serving infrastructure exercises | Python | Explores production-style LLM inference concerns |
 
 ---
 
-## Data Engineering & Real-Time Pipelines
+## Data, Ads & Recommendations
 
 | Project | Description | Tech | Highlights |
 |---------|-------------|------|------------|
-| [**realtime-clickstream-pipeline**](https://github.com/96528025/realtime-clickstream-pipeline) | End-to-end real-time streaming pipeline for e-commerce events | Python, Apache Kafka, SQLite | 165,474 events processed; 17-field standardized schema; real-time geographic/session analytics |
-| [**ecommerce-etl-sql-pipeline**](https://github.com/96528025/ecommerce-etl-sql-pipeline) | Batch ETL pipeline with SQL transformations | Python, SQL | Structured batch processing and data normalization |
-| [**ecommerce-analytics-pipeline**](https://github.com/96528025/ecommerce-analytics-pipeline) | Analytics pipeline with aggregated reporting | Python | Trend analysis and metric aggregation |
+| [**AdPulse**](https://github.com/96528025/AdPulse) | Kafka-based ad clickstream analytics and fraud signal pipeline | Go, Kafka | Streaming fraud and monetization signals |
+| [**realtime-clickstream-pipeline**](https://github.com/96528025/realtime-clickstream-pipeline) | Real-time e-commerce event pipeline | Python, Kafka, SQLite | 165,474 events processed with a 17-field standardized schema |
+| [**ads-ranking-pipeline**](https://github.com/96528025/ads-ranking-pipeline) | Ads ranking pipeline prototype | Python | Ranking and feature pipeline practice |
+| [**ad-fraud-detection**](https://github.com/96528025/ad-fraud-detection) | Fraud detection experiments for advertising traffic | Python | Detection-oriented analytics workflow |
+| [**amazon-beauty-rec**](https://github.com/96528025/amazon-beauty-rec) | Two-stage retrieval-ranking recommendation system | Python | Built on 3.7M Amazon Beauty reviews |
+| [**ecommerce-etl-sql-pipeline**](https://github.com/96528025/ecommerce-etl-sql-pipeline) | Batch ETL pipeline with SQL transformations | Python, SQL | Structured processing and normalization |
+| [**ecommerce-analytics-pipeline**](https://github.com/96528025/ecommerce-analytics-pipeline) | Analytics pipeline with aggregated reporting | Python | Trend analysis and reporting workflow |
 
 ---
 
-## AI & Machine Learning
+## AI Agents & Applied AI
 
 | Project | Description | Tech | Highlights |
 |---------|-------------|------|------------|
-| [**spring-ai-knowledge-assistant**](https://github.com/96528025/spring-ai-knowledge-assistant) | GenAI-powered document Q&A system | Java 21, Spring Boot 3, OpenAI API | Provider-abstracted AI client; layered architecture with MockAI for cost-free testing |
-| [**cs5100-review-tool**](https://github.com/96528025/cs5100-review-tool) | Bilingual study guide generator for lecture PDFs | Python, Flask, Claude API, GPT-4o | Side-by-side English/Chinese analysis; YouTube + Bilibili search links; local PDF caching |
+| [**foodbank-forge**](https://github.com/96528025/foodbank-forge) | Tool generator for food bank data queries | Python, Redis, OpenAI, Claude | Inspired by an AI hackathon workflow; turns requests into data tools |
+| [**voice-web-agent**](https://github.com/96528025/voice-web-agent) | Voice-controlled web reading assistant | Python, Claude | Ask by voice, read webpages, answer, and speak results |
+| [**spring-ai-knowledge-assistant**](https://github.com/96528025/spring-ai-knowledge-assistant) | Document Q&A system | Java, Spring Boot, OpenAI API | Layered architecture with a mock AI client for cost-free tests |
+| [**cs5100-review-tool**](https://github.com/96528025/cs5100-review-tool) | Bilingual study guide generator for lecture PDFs | Python, Flask, Claude API, GPT-4o | English/Chinese analysis, local PDF caching, video search links |
+| [**joke-translator-agent**](https://github.com/96528025/joke-translator-agent) | Humor-aware translation agent | Python | Experiments with preserving intent across languages |
+| [**ai-roundtable**](https://github.com/96528025/ai-roundtable) | Multi-agent discussion interface | TypeScript | Prototype for structured AI debate and synthesis |
 
 ---
 
-## OpenClaw Skills (AI Automation)
-
-> OpenClaw is a Raspberry Pi–based always-on AI assistant. These are custom skills built for it.
+## Automation Tools
 
 | Project | Description | Tech | Highlights |
 |---------|-------------|------|------------|
-| [**openclaw-skill-ulta-deals**](https://github.com/96528025/openclaw-skill-ulta-deals) | Automated beauty product price monitor | Python, Playwright | Detects price drops, promo badges, and free gift events; dual-database design (static baseline + price history) |
-| [**openclaw-skill-twitter-digest**](https://github.com/96528025/openclaw-skill-twitter-digest) | Real-time Twitter/X scraper with Chinese translation | Python, Playwright, Claude API | Cookie-based auth; smart time-range scrolling; line-by-line bilingual output |
-| [**ulta-redken-monitor**](https://github.com/96528025/ulta-redken-monitor) | Redken product discovery and price tracking on Ulta | Python, Playwright, Claude API | Crawls 89 products across paginated pages; series grouping; hover-to-enlarge HTML catalog |
+| [**openclaw-skill-ulta-deals**](https://github.com/96528025/openclaw-skill-ulta-deals) | Automated beauty product deal monitor | Python, Playwright | Price drops, promo badges, free gift detection, price history |
+| [**openclaw-skill-twitter-digest**](https://github.com/96528025/openclaw-skill-twitter-digest) | Twitter/X digest scraper with Chinese translation | Python, Playwright, Claude API | Authenticated scraping, time-range scrolling, bilingual output |
+| [**ulta-redken-monitor**](https://github.com/96528025/ulta-redken-monitor) | Redken product discovery and price tracker | Python, Playwright, Claude API | Crawls product pages and builds an HTML catalog |
+| [**discord-chinese-summary**](https://github.com/96528025/discord-chinese-summary) | Discord English-to-Chinese summarizer | Python, Claude API | Translation and summarization for community chats |
+| [**gtc2026-companies**](https://github.com/96528025/gtc2026-companies) | Curated directory of 436 NVIDIA GTC 2026 exhibitors | HTML | Company ranking, logos, descriptions, and website links |
 
 ---
 
-## Tools & Utilities
-
-| Project | Description | Tech | Highlights |
-|---------|-------------|------|------------|
-| [**discord-chinese-summary**](https://github.com/96528025/discord-chinese-summary) | Discord bot that summarizes English chats in Chinese | Python, Claude API | Automated translation and summarization via Anthropic API |
-| [**todo-api**](https://github.com/96528025/todo-api) | RESTful CRUD API | Java, Spring Boot | Clean layered architecture with JUnit tests |
-| [**gtc2026-companies**](https://github.com/96528025/gtc2026-companies) | Curated directory of 436 GTC 2026 exhibitors | HTML | 5-tier company ranking; logos, descriptions, website links; built from NVIDIA GTC API data |
-
----
-
-## Forks & Open Source Contributions
-
-| Project | Description |
-|---------|-------------|
-| [**NemoClaw**](https://github.com/96528025/NemoClaw) | NVIDIA's sandboxed AI agent runtime — Docker, k3s, Landlock security policies |
-| [**OpenCut**](https://github.com/96528025/OpenCut) | Open-source CapCut alternative |
-| [**PyRIT**](https://github.com/96528025/PyRIT) | Microsoft's framework for identifying risks in generative AI systems |
-
----
-
-## Fun Projects
+## Creative Experiments
 
 | Project | Description | Tech |
 |---------|-------------|------|
+| [**fruit_ninja**](https://github.com/96528025/fruit_ninja) | Browser game experiment | JavaScript |
+| [**baozi-gesture-game**](https://github.com/96528025/baozi-gesture-game) | Gesture-based game prototype | TypeScript |
 | [**particles**](https://github.com/96528025/particles) | Interactive particle animation | HTML, JavaScript |
 | [**focussnake**](https://github.com/96528025/focussnake) | Browser-based Snake game | HTML, JavaScript |
 
 ---
 
-*Last updated: May 2026*
+## Forks & Open Source Exploration
+
+| Project | Description |
+|---------|-------------|
+| [**NemoClaw**](https://github.com/96528025/NemoClaw) | NVIDIA plugin for secure OpenClaw installation |
+| [**OpenCut**](https://github.com/96528025/OpenCut) | Open-source CapCut alternative |
+| [**PyRIT**](https://github.com/96528025/PyRIT) | Microsoft's Python Risk Identification Tool for generative AI systems |
+
+---
+
+## Focus
+
+- Backend systems and infrastructure
+- Real-time data pipelines
+- Applied AI and agent workflows
+- Ads, recommendation, and ranking systems
+- Practical automation tools
+
+*Last updated: July 2026*
