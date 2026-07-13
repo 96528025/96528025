@@ -73,7 +73,6 @@ Five projects that span the work I'm targeting — real-time ML, distributed sys
 
 | Project | Description | Tech |
 |---------|-------------|------|
-| [**fruit_ninja**](https://github.com/96528025/fruit_ninja) | Browser game experiment | JavaScript |
 | [**baozi-gesture-game**](https://github.com/96528025/baozi-gesture-game) | Gesture-based game prototype | TypeScript |
 
 ---
