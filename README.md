@@ -29,9 +29,7 @@ Five projects that span the work I'm targeting — real-time ML, distributed sys
 | Project | Description | Tech | Highlights |
 |---------|-------------|------|------------|
 | [**distributed-system**](https://github.com/96528025/distributed-system) | Highly available web service across 3 AWS regions | Python, AWS EC2, Route 53 | Health-checked regional failover with zero-downtime routing |
-| [**TinyCache**](https://github.com/96528025/TinyCache) | In-memory key-value cache written in C++ | C++ | Hands-on backend & systems programming fundamentals |
-| [**llm-serving-infra-simulator**](https://github.com/96528025/llm-serving-infra-simulator) | LLM serving infrastructure simulator | Python | Models LLM serving behavior, request routing, and infra tradeoffs |
-| [**advanced-llm-serving-infra**](https://github.com/96528025/advanced-llm-serving-infra) | Production-style LLM serving infrastructure | Python | Deeper LLM serving and inference design work |
+| [**llm-serving-infra-simulator**](https://github.com/96528025/llm-serving-infra-simulator) | LLM serving infrastructure simulator | Python, FastAPI | OpenAI-style endpoint with micro-batching, SSE streaming, and Prometheus metrics — runs without a GPU |
 
 ---
 
@@ -52,7 +50,6 @@ Five projects that span the work I'm targeting — real-time ML, distributed sys
 | Project | Description | Tech | Highlights |
 |---------|-------------|------|------------|
 | [**foodbank-forge**](https://github.com/96528025/foodbank-forge) | Tool generator for food bank data queries | Python, Redis, OpenAI, Claude | Inspired by an AI hackathon workflow; turns requests into data tools |
-| [**voice-web-agent**](https://github.com/96528025/voice-web-agent) | Voice-controlled web reading assistant | Python, Claude | Ask by voice, read webpages, answer, and speak results |
 | [**cs5100-review-tool**](https://github.com/96528025/cs5100-review-tool) | Bilingual study guide generator for lecture PDFs | Python, Flask, Claude API, GPT-4o | English/Chinese analysis, local PDF caching, video search links |
 
 ---
