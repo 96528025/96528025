@@ -1,21 +1,25 @@
-## Hi, I'm Freja
+## Hi, I'm Freja 👋
 
 I build backend systems, AI agents, real-time data pipelines, and small tools that turn messy workflows into usable software.
 
 My strongest interests are distributed systems, data infrastructure, applied AI, ads/recommendation systems, and practical automation.
 
+🎓 M.S. Artificial Intelligence &nbsp;·&nbsp; 💼 **Open to Winter / Spring 2026 internships** — SWE · ML / AI Engineering · Data Engineering
+📫 *<!-- add your email / LinkedIn here -->* &nbsp;·&nbsp; Projects below are things I actually shipped and ran — metrics are reproducible.
+
 ---
 
-## Featured Projects
+## ⭐ Featured Projects
 
-| Project | What it is | Stack | Why it matters |
-|---------|------------|-------|----------------|
-| [**distributed-kv**](https://github.com/96528025/distributed-kv) | Distributed key-value store with replication, failover, and transaction support | Python, Raft, AWS | Per-shard Raft consensus, 2PC multi-key transactions, 56 passing tests |
-| [**AdPulse**](https://github.com/96528025/AdPulse) | Real-time ad clickstream analytics and fraud signal pipeline | Go, Kafka | Streaming analytics inspired by modern ads monetization systems |
-| [**publishsafe**](https://github.com/96528025/publishsafe) | Privacy-preserving video publishing toolkit | Python, computer vision | Person tracking, segmentation blur, and avatar overlays for safer video sharing |
-| [**foodbank-forge**](https://github.com/96528025/foodbank-forge) | Natural-language tool generator for food bank data workflows | Python, Redis, OpenAI, Claude | Converts plain-language requests into usable data query tools |
-| [**realtime-clickstream-pipeline**](https://github.com/96528025/realtime-clickstream-pipeline) | End-to-end streaming pipeline for e-commerce events | Python, Kafka, SQLite | Processes standardized event streams with geographic and session analytics |
-| [**spring-ai-knowledge-assistant**](https://github.com/96528025/spring-ai-knowledge-assistant) | GenAI document Q&A assistant | Java 21, Spring Boot 3, OpenAI API | Provider-abstracted AI client with mockable testing architecture |
+Five projects that span the work I'm targeting — real-time ML, distributed systems, data engineering, full-stack AI apps, and enterprise backend. Each runs end-to-end with reproducible results.
+
+| Project | What it is | Stack | Verified results |
+|---------|------------|-------|------------------|
+| [**ad-fraud-detection**](https://github.com/96528025/ad-fraud-detection) | Real-time ad-click fraud detection pipeline (rules + ML) | Kafka, Redis, XGBoost, Flask | **AUC 0.9785** on real Kaggle TalkingData, **98% fraud recall**, rule-engine **p99 < 2ms**, ~268 clicks/sec |
+| [**distributed-kv**](https://github.com/96528025/distributed-kv) | Distributed key-value store built from scratch, up to per-shard Raft groups | Python, Raft, AWS | Per-shard Raft consensus, 2PC multi-key transactions, **56/56 tests passing** |
+| [**realtime-clickstream-pipeline**](https://github.com/96528025/realtime-clickstream-pipeline) | End-to-end real-time e-commerce event pipeline | Python, Kafka, SQLite | **165,474 events** streamed through Kafka → SQLite with geo/category/session analytics |
+| [**publishsafe**](https://github.com/96528025/publishsafe) | Privacy-preserving video publishing — keeps one creator, blurs everyone else | Python, YOLO segmentation, Docker | Person tracking + body-mask blur; full-stack, one-command Docker start |
+| [**spring-ai-knowledge-assistant**](https://github.com/96528025/spring-ai-knowledge-assistant) | GenAI document-grounded Q&A service | Java 21, Spring Boot 3, OpenAI API | Provider-abstracted AI client (mock ↔ real), **5/5 hermetic tests passing** |
 
 ---
 
@@ -40,7 +44,7 @@ My strongest interests are distributed systems, data infrastructure, applied AI,
 | [**realtime-clickstream-pipeline**](https://github.com/96528025/realtime-clickstream-pipeline) | Real-time e-commerce event pipeline | Python, Kafka, SQLite | 165,474 events processed with a 17-field standardized schema |
 | [**ads-ranking-pipeline**](https://github.com/96528025/ads-ranking-pipeline) | Ads ranking pipeline prototype | Python | Ranking and feature pipeline practice |
 | [**ad-fraud-detection**](https://github.com/96528025/ad-fraud-detection) | Fraud detection experiments for advertising traffic | Python | Detection-oriented analytics workflow |
-| [**amazon-beauty-rec**](https://github.com/96528025/amazon-beauty-rec) | Two-stage retrieval-ranking recommendation system | Python | Built on 3.7M Amazon Beauty reviews |
+| [**amazon-beauty-rec**](https://github.com/96528025/amazon-beauty-rec) | Two-stage retrieval-ranking recommender (WIP) | Python, PyTorch, FAISS | On 3.7M Amazon Beauty reviews; ALS baseline + eval done, two-tower stage in progress |
 | [**ecommerce-etl-sql-pipeline**](https://github.com/96528025/ecommerce-etl-sql-pipeline) | Batch ETL pipeline with SQL transformations | Python, SQL | Structured processing and normalization |
 | [**ecommerce-analytics-pipeline**](https://github.com/96528025/ecommerce-analytics-pipeline) | Analytics pipeline with aggregated reporting | Python | Trend analysis and reporting workflow |
 
