@@ -30,7 +30,6 @@ Five projects that span the work I'm targeting — real-time ML, distributed sys
 | [**distributed-kv**](https://github.com/96528025/distributed-kv) | Production-grade distributed key-value store | Python, Raft, AWS | Per-shard Raft consensus, 2PC multi-key transactions, 41.5 msg/sec at 50 concurrent users |
 | [**distributed-system**](https://github.com/96528025/distributed-system) | Highly available web service across 3 AWS regions | Python, AWS EC2, Route 53 | Health-checked regional failover with zero-downtime routing |
 | [**TinyCache**](https://github.com/96528025/TinyCache) | Beginner-friendly in-memory cache | C++ | Backend and systems programming concepts in a compact project |
-| [**vm-cluster-project**](https://github.com/96528025/vm-cluster-project) | Local 3-node virtual server cluster | Vagrant, Parallels, Ubuntu | DevOps and virtualization practice on Apple Silicon |
 | [**llm-serving-infra-simulator**](https://github.com/96528025/llm-serving-infra-simulator) | LLM serving infrastructure simulator | Python | Experiments with serving behavior, routing, and infrastructure tradeoffs |
 | [**advanced-llm-serving-infra**](https://github.com/96528025/advanced-llm-serving-infra) | Advanced LLM serving infrastructure exercises | Python | Explores production-style LLM inference concerns |
 
@@ -58,8 +57,6 @@ Five projects that span the work I'm targeting — real-time ML, distributed sys
 | [**voice-web-agent**](https://github.com/96528025/voice-web-agent) | Voice-controlled web reading assistant | Python, Claude | Ask by voice, read webpages, answer, and speak results |
 | [**spring-ai-knowledge-assistant**](https://github.com/96528025/spring-ai-knowledge-assistant) | Document Q&A system | Java, Spring Boot, OpenAI API | Layered architecture with a mock AI client for cost-free tests |
 | [**cs5100-review-tool**](https://github.com/96528025/cs5100-review-tool) | Bilingual study guide generator for lecture PDFs | Python, Flask, Claude API, GPT-4o | English/Chinese analysis, local PDF caching, video search links |
-| [**joke-translator-agent**](https://github.com/96528025/joke-translator-agent) | Humor-aware translation agent | Python | Experiments with preserving intent across languages |
-| [**ai-roundtable**](https://github.com/96528025/ai-roundtable) | Multi-agent discussion interface | TypeScript | Prototype for structured AI debate and synthesis |
 
 ---
 
