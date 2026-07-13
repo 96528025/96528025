@@ -1,8 +1,6 @@
 ## Hi, I'm Freja 👋
 
-I build backend systems, AI agents, real-time data pipelines, and small tools that turn messy workflows into usable software.
-
-My strongest interests are distributed systems, data infrastructure, applied AI, ads/recommendation systems, and practical automation.
+I build backend systems, real-time data pipelines, and applied-AI tools that turn messy workflows into usable software — with a focus on distributed systems, data infrastructure, and ads/recommendation systems.
 
 🎓 M.S. Artificial Intelligence &nbsp;·&nbsp; 💼 **Open to Winter / Spring 2026 internships** — SWE · ML / AI Engineering · Data Engineering
 
@@ -24,11 +22,12 @@ Five projects that span the work I'm targeting — real-time ML, distributed sys
 
 ---
 
+*More of my work, grouped by area — the five above are the highlights.*
+
 ## Systems & Infrastructure
 
 | Project | Description | Tech | Highlights |
 |---------|-------------|------|------------|
-| [**distributed-kv**](https://github.com/96528025/distributed-kv) | Distributed key-value store built from scratch (replication → Raft → sharding) | Python, Raft, AWS | Per-shard Raft consensus, 2PC multi-key transactions, 41.5 msg/sec at 50 concurrent users |
 | [**distributed-system**](https://github.com/96528025/distributed-system) | Highly available web service across 3 AWS regions | Python, AWS EC2, Route 53 | Health-checked regional failover with zero-downtime routing |
 | [**TinyCache**](https://github.com/96528025/TinyCache) | In-memory key-value cache written in C++ | C++ | Hands-on backend & systems programming fundamentals |
 | [**llm-serving-infra-simulator**](https://github.com/96528025/llm-serving-infra-simulator) | LLM serving infrastructure simulator | Python | Models LLM serving behavior, request routing, and infra tradeoffs |
@@ -41,9 +40,7 @@ Five projects that span the work I'm targeting — real-time ML, distributed sys
 | Project | Description | Tech | Highlights |
 |---------|-------------|------|------------|
 | [**AdPulse**](https://github.com/96528025/AdPulse) | Kafka-based ad clickstream analytics and fraud signal pipeline | Go, Kafka | Streaming fraud and monetization signals |
-| [**realtime-clickstream-pipeline**](https://github.com/96528025/realtime-clickstream-pipeline) | Real-time e-commerce event pipeline | Python, Kafka, SQLite | 165,474 events processed with a 17-field standardized schema |
 | [**ads-ranking-pipeline**](https://github.com/96528025/ads-ranking-pipeline) | Ads ranking pipeline (feature + scoring workflow) | Python | Feature engineering and model-scoring stages for ad ranking |
-| [**ad-fraud-detection**](https://github.com/96528025/ad-fraud-detection) | Real-time ad-click fraud detection (rules + ML) | Kafka, Redis, XGBoost, Flask | AUC 0.9785 on real Kaggle TalkingData, 98% recall, p99 < 2ms — see ⭐ Featured |
 | [**amazon-beauty-rec**](https://github.com/96528025/amazon-beauty-rec) | Two-stage retrieval-ranking recommender (WIP) | Python, PyTorch, FAISS | On 3.7M Amazon Beauty reviews; ALS baseline + eval done, two-tower stage in progress |
 | [**ecommerce-etl-sql-pipeline**](https://github.com/96528025/ecommerce-etl-sql-pipeline) | Batch ETL pipeline with SQL transformations | Python, SQL | Structured processing and normalization |
 | [**ecommerce-analytics-pipeline**](https://github.com/96528025/ecommerce-analytics-pipeline) | Analytics pipeline with aggregated reporting | Python | Trend analysis and reporting workflow |
@@ -56,7 +53,6 @@ Five projects that span the work I'm targeting — real-time ML, distributed sys
 |---------|-------------|------|------------|
 | [**foodbank-forge**](https://github.com/96528025/foodbank-forge) | Tool generator for food bank data queries | Python, Redis, OpenAI, Claude | Inspired by an AI hackathon workflow; turns requests into data tools |
 | [**voice-web-agent**](https://github.com/96528025/voice-web-agent) | Voice-controlled web reading assistant | Python, Claude | Ask by voice, read webpages, answer, and speak results |
-| [**spring-ai-knowledge-assistant**](https://github.com/96528025/spring-ai-knowledge-assistant) | Document Q&A system | Java, Spring Boot, OpenAI API | Layered architecture with a mock AI client for cost-free tests |
 | [**cs5100-review-tool**](https://github.com/96528025/cs5100-review-tool) | Bilingual study guide generator for lecture PDFs | Python, Flask, Claude API, GPT-4o | English/Chinese analysis, local PDF caching, video search links |
 
 ---
