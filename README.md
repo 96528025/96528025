@@ -83,16 +83,6 @@ Five projects that span the work I'm targeting — real-time ML, distributed sys
 
 ---
 
-## Forks & Open Source Exploration
-
-| Project | Description |
-|---------|-------------|
-| [**NemoClaw**](https://github.com/96528025/NemoClaw) | NVIDIA plugin for secure OpenClaw installation |
-| [**OpenCut**](https://github.com/96528025/OpenCut) | Open-source CapCut alternative |
-| [**PyRIT**](https://github.com/96528025/PyRIT) | Microsoft's Python Risk Identification Tool for generative AI systems |
-
----
-
 ## Focus
 
 - Backend systems and infrastructure
