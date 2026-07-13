@@ -5,7 +5,8 @@ I build backend systems, AI agents, real-time data pipelines, and small tools th
 My strongest interests are distributed systems, data infrastructure, applied AI, ads/recommendation systems, and practical automation.
 
 🎓 M.S. Artificial Intelligence &nbsp;·&nbsp; 💼 **Open to Winter / Spring 2026 internships** — SWE · ML / AI Engineering · Data Engineering
-📫 *<!-- add your email / LinkedIn here -->* &nbsp;·&nbsp; Projects below are things I actually shipped and ran — metrics are reproducible.
+
+> Projects below are things I actually shipped and ran — metrics are reproducible.
 
 ---
 
@@ -82,13 +83,5 @@ Five projects that span the work I'm targeting — real-time ML, distributed sys
 | [**focussnake**](https://github.com/96528025/focussnake) | Browser-based Snake game | HTML, JavaScript |
 
 ---
-
-## Focus
-
-- Backend systems and infrastructure
-- Real-time data pipelines
-- Applied AI and agent workflows
-- Ads, recommendation, and ranking systems
-- Practical automation tools
 
 *Last updated: July 2026*
