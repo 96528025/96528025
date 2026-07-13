@@ -28,8 +28,17 @@ Five projects that span the work I'm targeting — real-time ML, distributed sys
 
 | Project | Description | Tech | Highlights |
 |---------|-------------|------|------------|
+| [**MetroRide**](https://github.com/96528025/MetroRide) | Production-style distributed ride-hailing backend | Go, Redis Streams, PostgreSQL, Prometheus/Grafana, Docker/K8s | Event-driven services over a Redis Streams bus, PostgreSQL system-of-record, Prometheus + Grafana observability |
 | [**distributed-system**](https://github.com/96528025/distributed-system) | Highly available web service across 3 AWS regions | Python, AWS EC2, Route 53 | Health-checked regional failover with zero-downtime routing |
 | [**llm-serving-infra-simulator**](https://github.com/96528025/llm-serving-infra-simulator) | LLM serving infrastructure simulator | Python, FastAPI | OpenAI-style endpoint with micro-batching, SSE streaming, and Prometheus metrics — runs without a GPU |
+
+---
+
+## Web & Full-Stack
+
+| Project | Description | Tech | Highlights |
+|---------|-------------|------|------------|
+| [**Flickora**](https://github.com/96528025/netfliiix) | Netflix-style streaming web app (foundation build) | Next.js 16, React 19, TypeScript, Supabase, Playwright | Email/password auth, profile management, and protected routes backed by Supabase Row-Level Security; E2E tested with Playwright |
 
 ---
 
@@ -37,6 +46,7 @@ Five projects that span the work I'm targeting — real-time ML, distributed sys
 
 | Project | Description | Tech | Highlights |
 |---------|-------------|------|------------|
+| [**ad-guard-ai**](https://github.com/96528025/ad-guard-ai) | LLM-powered post-click ad risk detection (creative + landing page) | Python, Claude API | Catches policy violations and scams that appear *after* the click, where rule-based systems miss them |
 | [**AdPulse**](https://github.com/96528025/AdPulse) | Kafka-based ad clickstream analytics and fraud signal pipeline | Go, Kafka | Streaming fraud and monetization signals |
 | [**ads-ranking-pipeline**](https://github.com/96528025/ads-ranking-pipeline) | Ads ranking pipeline (feature + scoring workflow) | Python | Feature engineering and model-scoring stages for ad ranking |
 | [**amazon-beauty-rec**](https://github.com/96528025/amazon-beauty-rec) | Two-stage retrieval-ranking recommender (WIP) | Python, PyTorch, FAISS | On 3.7M Amazon Beauty reviews; ALS baseline + eval done, two-tower stage in progress |
