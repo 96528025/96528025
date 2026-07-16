@@ -1,91 +1,62 @@
-## Project Portfolio
+## Engineering Project Index
 
-Backend systems, real-time data pipelines, applied-AI tools, and automation projects.
-
-This profile is intentionally project-first. It does not include personal background, social links, location, education, contact details, or identity-specific information.
+Selected public repositories focused on backend systems, real-time data pipelines, applied AI, and automation.
 
 ---
 
-## Featured Projects
+## Flagship Projects
 
-Five representative projects spanning real-time ML, distributed systems, data engineering, full-stack AI applications, and backend service design.
-
-| Project | What it is | Stack | Verified results |
-|---------|------------|-------|------------------|
-| [**ad-fraud-detection**](https://github.com/96528025/ad-fraud-detection) | Real-time ad-click fraud detection pipeline with rules and ML | Kafka, Redis, XGBoost, Flask | AUC 0.9785 on Kaggle TalkingData, 98% fraud recall, rule-engine p99 < 2ms, ~268 clicks/sec |
-| [**distributed-kv**](https://github.com/96528025/distributed-kv) | Distributed key-value store built from scratch, up to per-shard Raft groups | Python, Raft, AWS | Per-shard Raft consensus, 2PC multi-key transactions, 56/56 tests passing |
-| [**realtime-clickstream-pipeline**](https://github.com/96528025/realtime-clickstream-pipeline) | End-to-end real-time e-commerce event pipeline | Python, Kafka, SQLite | 165,474 events streamed through Kafka to SQLite with geo/category/session analytics |
-| [**publishsafe**](https://github.com/96528025/publishsafe) | Privacy-preserving video publishing toolkit | Python, YOLO segmentation, Docker | Person tracking, body-mask blur, avatar overlays, one-command Docker start |
-| [**spring-ai-knowledge-assistant**](https://github.com/96528025/spring-ai-knowledge-assistant) | GenAI document-grounded Q&A service | Java 21, Spring Boot 3, OpenAI API | Provider-abstracted AI client, mock/real switching, 5/5 hermetic tests passing |
-
----
-
-## Systems & Infrastructure
-
-| Project | Description | Tech | Highlights |
-|---------|-------------|------|------------|
-| [**MetroRide**](https://github.com/96528025/MetroRide) | Production-style distributed ride-hailing backend | Go, Redis Streams, PostgreSQL, Prometheus/Grafana, Docker/K8s | Event-driven services over Redis Streams, PostgreSQL system of record, Prometheus + Grafana observability |
-| [**distributed-system**](https://github.com/96528025/distributed-system) | Highly available web service across 3 AWS regions | Python, AWS EC2, Route 53 | Health-checked regional failover with zero-downtime routing |
-| [**llm-serving-infra-simulator**](https://github.com/96528025/llm-serving-infra-simulator) | LLM serving infrastructure simulator | Python, FastAPI | OpenAI-style endpoint with micro-batching, SSE streaming, and Prometheus metrics |
+| Project | What it demonstrates | Stack | Evidence |
+|---------|----------------------|-------|----------|
+| [**ad-fraud-detection**](https://github.com/96528025/ad-fraud-detection) | Real-time fraud detection for ad-click streams | Kafka, Redis, XGBoost, Flask | AUC 0.9785, 98% fraud recall, rule-engine p99 < 2ms |
+| [**distributed-kv**](https://github.com/96528025/distributed-kv) | Fault-tolerant distributed storage | Python, Raft, AWS | Per-shard Raft, 2PC multi-key transactions, 56/56 tests passing |
+| [**realtime-clickstream-pipeline**](https://github.com/96528025/realtime-clickstream-pipeline) | End-to-end streaming data infrastructure | Python, Kafka, SQLite | 165,474 events processed with geo/category/session analytics |
+| [**publishsafe**](https://github.com/96528025/publishsafe) | Privacy-preserving video processing | Python, YOLO segmentation, Docker | Person tracking, body-mask blur, avatar overlays |
+| [**spring-ai-knowledge-assistant**](https://github.com/96528025/spring-ai-knowledge-assistant) | Document-grounded AI service architecture | Java 21, Spring Boot 3, OpenAI API | Provider abstraction, mockable AI client, hermetic tests |
+| [**smart-job-platform**](https://github.com/96528025/smart-job-platform) | Metrics-driven background job platform | FastAPI, Celery, Redis, Prometheus, Grafana | Queues, workers, metrics, dashboards, Dockerized services |
 
 ---
 
-## Web & Full-Stack
+## Systems & Platform Engineering
 
-| Project | Description | Tech | Highlights |
-|---------|-------------|------|------------|
-| [**Flickora**](https://github.com/96528025/netfliiix) | Netflix-style streaming web app foundation | Next.js 16, React 19, TypeScript, Supabase, Playwright | Email/password auth, profile management, protected routes, Supabase Row-Level Security, E2E tests |
+| Project | Description | Stack |
+|---------|-------------|-------|
+| [**MetroRide**](https://github.com/96528025/MetroRide) | Distributed ride-hailing backend with event-driven services and observability | Go, Redis Streams, PostgreSQL, Prometheus/Grafana |
+| [**distributed-system**](https://github.com/96528025/distributed-system) | Highly available web service across three AWS regions | Python, AWS EC2, Route 53 |
+| [**llm-serving-infra-simulator**](https://github.com/96528025/llm-serving-infra-simulator) | Simulator for LLM serving, routing, batching, streaming, and metrics | Python, FastAPI, Prometheus |
+| [**real-llm-inference-lab**](https://github.com/96528025/real-llm-inference-lab) | Hands-on inference measurement and observability lab | Jupyter, Python |
 
 ---
 
 ## Data, Ads & Recommendations
 
-| Project | Description | Tech | Highlights |
-|---------|-------------|------|------------|
-| [**ad-guard-ai**](https://github.com/96528025/ad-guard-ai) | LLM-powered post-click ad risk detection | Python, Claude API | Detects policy and scam risk across creative and landing-page content |
-| [**AdPulse**](https://github.com/96528025/AdPulse) | Kafka-based ad clickstream analytics and fraud signal pipeline | Go, Kafka | Streaming fraud and monetization signals |
-| [**ads-ranking-pipeline**](https://github.com/96528025/ads-ranking-pipeline) | Ads ranking pipeline prototype | Python | Feature engineering and model-scoring workflow |
-| [**amazon-beauty-rec**](https://github.com/96528025/amazon-beauty-rec) | Two-stage retrieval-ranking recommender | Python, PyTorch, FAISS | Built on 3.7M Amazon Beauty reviews; ALS baseline + evaluation, two-tower stage in progress |
-| [**ecommerce-etl-sql-pipeline**](https://github.com/96528025/ecommerce-etl-sql-pipeline) | Batch ETL pipeline with SQL transformations | Python, SQL | Structured processing and normalization |
-| [**ecommerce-analytics-pipeline**](https://github.com/96528025/ecommerce-analytics-pipeline) | Analytics pipeline with aggregated reporting | Python | Trend analysis and reporting workflow |
+| Project | Description | Stack |
+|---------|-------------|-------|
+| [**AdPulse**](https://github.com/96528025/AdPulse) | Kafka-based ad clickstream analytics and fraud signal pipeline | Go, Kafka |
+| [**ad-guard-ai**](https://github.com/96528025/ad-guard-ai) | Post-click ad risk analysis across creative and landing-page content | Python, Claude API |
+| [**ads-ranking-pipeline**](https://github.com/96528025/ads-ranking-pipeline) | Feature and scoring workflow for ads ranking experiments | Python |
+| [**amazon-beauty-rec**](https://github.com/96528025/amazon-beauty-rec) | Two-stage retrieval-ranking recommender on 3.7M reviews | Python, PyTorch, FAISS |
+| [**ecommerce-etl-sql-pipeline**](https://github.com/96528025/ecommerce-etl-sql-pipeline) | Batch ETL pipeline with SQL transformations | Python, SQL |
 
 ---
 
-## AI Agents & Applied AI
+## Applied AI & Automation
 
-| Project | Description | Tech | Highlights |
-|---------|-------------|------|------------|
-| [**foodbank-forge**](https://github.com/96528025/foodbank-forge) | Tool generator for structured data queries | Python, Redis, OpenAI, Claude | Converts plain-language requests into reusable data tools |
-| [**cs5100-review-tool**](https://github.com/96528025/cs5100-review-tool) | Bilingual study guide generator for lecture PDFs | Python, Flask, Claude API, GPT-4o | English/Chinese analysis, local PDF caching, video search links |
-
----
-
-## Automation Tools
-
-| Project | Description | Tech | Highlights |
-|---------|-------------|------|------------|
-| [**openclaw-skill-ulta-deals**](https://github.com/96528025/openclaw-skill-ulta-deals) | Automated beauty product deal monitor | Python, Playwright | Price drops, promo badges, free gift detection, price history |
-| [**openclaw-skill-twitter-digest**](https://github.com/96528025/openclaw-skill-twitter-digest) | Twitter/X digest scraper with Chinese translation | Python, Playwright, Claude API | Authenticated scraping, time-range scrolling, bilingual output |
-| [**ulta-redken-monitor**](https://github.com/96528025/ulta-redken-monitor) | Product discovery and price tracker | Python, Playwright, Claude API | Crawls product pages and builds an HTML catalog |
-| [**discord-chinese-summary**](https://github.com/96528025/discord-chinese-summary) | Discord English-to-Chinese summarizer | Python, Claude API | Translation and summarization for community chats |
-| [**gtc2026-companies**](https://github.com/96528025/gtc2026-companies) | Curated directory of NVIDIA GTC exhibitors | HTML | Company ranking, logos, descriptions, and website links |
-
----
-
-## Creative Experiments
-
-| Project | Description | Tech |
-|---------|-------------|------|
-| [**baozi-gesture-game**](https://github.com/96528025/baozi-gesture-game) | Gesture-based game prototype | TypeScript |
+| Project | Description | Stack |
+|---------|-------------|-------|
+| [**foodbank-forge**](https://github.com/96528025/foodbank-forge) | Natural-language tool generation for structured data queries | Python, Redis, OpenAI, Claude |
+| [**cs5100-review-tool**](https://github.com/96528025/cs5100-review-tool) | Bilingual study guide generator for lecture PDFs | Python, Flask, Claude API, GPT-4o |
+| [**openclaw-skill-ulta-deals**](https://github.com/96528025/openclaw-skill-ulta-deals) | Automated product deal and price monitor | Python, Playwright |
+| [**openclaw-skill-twitter-digest**](https://github.com/96528025/openclaw-skill-twitter-digest) | Authenticated digest scraper with bilingual summarization | Python, Playwright, Claude API |
 
 ---
 
 ## Focus Areas
 
-- Backend systems and infrastructure
-- Real-time data pipelines
-- Applied AI and agent workflows
-- Ads, recommendation, and ranking systems
-- Practical automation tools
+- Distributed systems and backend infrastructure
+- Real-time data processing
+- Ads, ranking, fraud, and recommendation systems
+- Applied AI services with testable architecture
+- Automation tools for messy workflows
 
 *Last updated: July 2026*
