@@ -1,21 +1,21 @@
-## Hi, I'm Freja
+## Project Portfolio
 
-I build backend systems, AI agents, real-time data pipelines, and small tools that turn messy workflows into usable software.
+Backend systems, AI agents, real-time data pipelines, and automation tools.
 
-My strongest interests are distributed systems, data infrastructure, applied AI, ads/recommendation systems, and practical automation.
+This GitHub profile is intentionally project-first. It is organized around engineering work rather than personal background, social links, location, education, or identity details.
 
 ---
 
 ## Featured Projects
 
-| Project | What it is | Stack | Why it matters |
-|---------|------------|-------|----------------|
-| [**distributed-kv**](https://github.com/96528025/distributed-kv) | Distributed key-value store with replication, failover, and transaction support | Python, Raft, AWS | Per-shard Raft consensus, 2PC multi-key transactions, 56 passing tests |
-| [**AdPulse**](https://github.com/96528025/AdPulse) | Real-time ad clickstream analytics and fraud signal pipeline | Go, Kafka | Streaming analytics inspired by modern ads monetization systems |
-| [**publishsafe**](https://github.com/96528025/publishsafe) | Privacy-preserving video publishing toolkit | Python, computer vision | Person tracking, segmentation blur, and avatar overlays for safer video sharing |
-| [**foodbank-forge**](https://github.com/96528025/foodbank-forge) | Natural-language tool generator for food bank data workflows | Python, Redis, OpenAI, Claude | Converts plain-language requests into usable data query tools |
-| [**realtime-clickstream-pipeline**](https://github.com/96528025/realtime-clickstream-pipeline) | End-to-end streaming pipeline for e-commerce events | Python, Kafka, SQLite | Processes standardized event streams with geographic and session analytics |
-| [**spring-ai-knowledge-assistant**](https://github.com/96528025/spring-ai-knowledge-assistant) | GenAI document Q&A assistant | Java 21, Spring Boot 3, OpenAI API | Provider-abstracted AI client with mockable testing architecture |
+| Project | What it is | Stack | Engineering focus |
+|---------|------------|-------|-------------------|
+| [**distributed-kv**](https://github.com/96528025/distributed-kv) | Distributed key-value store with replication, failover, and transaction support | Python, Raft, AWS | Per-shard Raft consensus, 2PC multi-key transactions, fault-tolerant storage |
+| [**AdPulse**](https://github.com/96528025/AdPulse) | Real-time ad clickstream analytics and fraud signal pipeline | Go, Kafka | Streaming analytics, event processing, fraud signals |
+| [**publishsafe**](https://github.com/96528025/publishsafe) | Privacy-preserving video publishing toolkit | Python, computer vision | Person tracking, segmentation blur, avatar overlays |
+| [**foodbank-forge**](https://github.com/96528025/foodbank-forge) | Natural-language tool generator for structured data workflows | Python, Redis, OpenAI, Claude | Tool generation, retrieval, AI-assisted data access |
+| [**realtime-clickstream-pipeline**](https://github.com/96528025/realtime-clickstream-pipeline) | End-to-end streaming pipeline for e-commerce events | Python, Kafka, SQLite | Event schema design, consumer processing, analytics output |
+| [**spring-ai-knowledge-assistant**](https://github.com/96528025/spring-ai-knowledge-assistant) | GenAI document Q&A assistant | Java 21, Spring Boot 3, OpenAI API | Layered architecture, provider abstraction, testable AI client |
 
 ---
 
@@ -23,12 +23,12 @@ My strongest interests are distributed systems, data infrastructure, applied AI,
 
 | Project | Description | Tech | Highlights |
 |---------|-------------|------|------------|
-| [**distributed-kv**](https://github.com/96528025/distributed-kv) | Production-grade distributed key-value store | Python, Raft, AWS | Per-shard Raft consensus, 2PC multi-key transactions, 41.5 msg/sec at 50 concurrent users |
+| [**distributed-kv**](https://github.com/96528025/distributed-kv) | Distributed key-value store | Python, Raft, AWS | Per-shard Raft consensus, 2PC multi-key transactions, 56 passing tests |
 | [**distributed-system**](https://github.com/96528025/distributed-system) | Highly available web service across 3 AWS regions | Python, AWS EC2, Route 53 | Health-checked regional failover with zero-downtime routing |
-| [**TinyCache**](https://github.com/96528025/TinyCache) | Beginner-friendly in-memory cache | C++ | Backend and systems programming concepts in a compact project |
-| [**vm-cluster-project**](https://github.com/96528025/vm-cluster-project) | Local 3-node virtual server cluster | Vagrant, Parallels, Ubuntu | DevOps and virtualization practice on Apple Silicon |
-| [**llm-serving-infra-simulator**](https://github.com/96528025/llm-serving-infra-simulator) | LLM serving infrastructure simulator | Python | Experiments with serving behavior, routing, and infrastructure tradeoffs |
-| [**advanced-llm-serving-infra**](https://github.com/96528025/advanced-llm-serving-infra) | Advanced LLM serving infrastructure exercises | Python | Explores production-style LLM inference concerns |
+| [**TinyCache**](https://github.com/96528025/TinyCache) | Compact in-memory cache | C++ | Cache internals, backend fundamentals, systems programming practice |
+| [**vm-cluster-project**](https://github.com/96528025/vm-cluster-project) | Local 3-node virtual server cluster | Vagrant, Parallels, Ubuntu | DevOps and virtualization workflow |
+| [**llm-serving-infra-simulator**](https://github.com/96528025/llm-serving-infra-simulator) | LLM serving infrastructure simulator | Python | Serving behavior, routing, infrastructure tradeoffs |
+| [**advanced-llm-serving-infra**](https://github.com/96528025/advanced-llm-serving-infra) | Advanced LLM serving infrastructure exercises | Python | Production-style inference concerns |
 
 ---
 
@@ -38,7 +38,7 @@ My strongest interests are distributed systems, data infrastructure, applied AI,
 |---------|-------------|------|------------|
 | [**AdPulse**](https://github.com/96528025/AdPulse) | Kafka-based ad clickstream analytics and fraud signal pipeline | Go, Kafka | Streaming fraud and monetization signals |
 | [**realtime-clickstream-pipeline**](https://github.com/96528025/realtime-clickstream-pipeline) | Real-time e-commerce event pipeline | Python, Kafka, SQLite | 165,474 events processed with a 17-field standardized schema |
-| [**ads-ranking-pipeline**](https://github.com/96528025/ads-ranking-pipeline) | Ads ranking pipeline prototype | Python | Ranking and feature pipeline practice |
+| [**ads-ranking-pipeline**](https://github.com/96528025/ads-ranking-pipeline) | Ads ranking pipeline prototype | Python | Ranking workflow and feature pipeline practice |
 | [**ad-fraud-detection**](https://github.com/96528025/ad-fraud-detection) | Fraud detection experiments for advertising traffic | Python | Detection-oriented analytics workflow |
 | [**amazon-beauty-rec**](https://github.com/96528025/amazon-beauty-rec) | Two-stage retrieval-ranking recommendation system | Python | Built on 3.7M Amazon Beauty reviews |
 | [**ecommerce-etl-sql-pipeline**](https://github.com/96528025/ecommerce-etl-sql-pipeline) | Batch ETL pipeline with SQL transformations | Python, SQL | Structured processing and normalization |
@@ -50,12 +50,12 @@ My strongest interests are distributed systems, data infrastructure, applied AI,
 
 | Project | Description | Tech | Highlights |
 |---------|-------------|------|------------|
-| [**foodbank-forge**](https://github.com/96528025/foodbank-forge) | Tool generator for food bank data queries | Python, Redis, OpenAI, Claude | Inspired by an AI hackathon workflow; turns requests into data tools |
-| [**voice-web-agent**](https://github.com/96528025/voice-web-agent) | Voice-controlled web reading assistant | Python, Claude | Ask by voice, read webpages, answer, and speak results |
+| [**foodbank-forge**](https://github.com/96528025/foodbank-forge) | Tool generator for structured data queries | Python, Redis, OpenAI, Claude | Converts plain-language requests into reusable data tools |
+| [**voice-web-agent**](https://github.com/96528025/voice-web-agent) | Voice-controlled web reading assistant | Python, Claude | Voice input, webpage reading, answer synthesis, speech output |
 | [**spring-ai-knowledge-assistant**](https://github.com/96528025/spring-ai-knowledge-assistant) | Document Q&A system | Java, Spring Boot, OpenAI API | Layered architecture with a mock AI client for cost-free tests |
 | [**cs5100-review-tool**](https://github.com/96528025/cs5100-review-tool) | Bilingual study guide generator for lecture PDFs | Python, Flask, Claude API, GPT-4o | English/Chinese analysis, local PDF caching, video search links |
 | [**joke-translator-agent**](https://github.com/96528025/joke-translator-agent) | Humor-aware translation agent | Python | Experiments with preserving intent across languages |
-| [**ai-roundtable**](https://github.com/96528025/ai-roundtable) | Multi-agent discussion interface | TypeScript | Prototype for structured AI debate and synthesis |
+| [**ai-roundtable**](https://github.com/96528025/ai-roundtable) | Multi-agent discussion interface | TypeScript | Structured AI debate and synthesis prototype |
 
 ---
 
@@ -65,9 +65,9 @@ My strongest interests are distributed systems, data infrastructure, applied AI,
 |---------|-------------|------|------------|
 | [**openclaw-skill-ulta-deals**](https://github.com/96528025/openclaw-skill-ulta-deals) | Automated beauty product deal monitor | Python, Playwright | Price drops, promo badges, free gift detection, price history |
 | [**openclaw-skill-twitter-digest**](https://github.com/96528025/openclaw-skill-twitter-digest) | Twitter/X digest scraper with Chinese translation | Python, Playwright, Claude API | Authenticated scraping, time-range scrolling, bilingual output |
-| [**ulta-redken-monitor**](https://github.com/96528025/ulta-redken-monitor) | Redken product discovery and price tracker | Python, Playwright, Claude API | Crawls product pages and builds an HTML catalog |
+| [**ulta-redken-monitor**](https://github.com/96528025/ulta-redken-monitor) | Product discovery and price tracker | Python, Playwright, Claude API | Crawls product pages and builds an HTML catalog |
 | [**discord-chinese-summary**](https://github.com/96528025/discord-chinese-summary) | Discord English-to-Chinese summarizer | Python, Claude API | Translation and summarization for community chats |
-| [**gtc2026-companies**](https://github.com/96528025/gtc2026-companies) | Curated directory of 436 NVIDIA GTC 2026 exhibitors | HTML | Company ranking, logos, descriptions, and website links |
+| [**gtc2026-companies**](https://github.com/96528025/gtc2026-companies) | Curated directory of NVIDIA GTC exhibitors | HTML | Company ranking, logos, descriptions, and website links |
 
 ---
 
@@ -82,17 +82,17 @@ My strongest interests are distributed systems, data infrastructure, applied AI,
 
 ---
 
-## Forks & Open Source Exploration
+## Open Source Exploration
 
 | Project | Description |
 |---------|-------------|
 | [**NemoClaw**](https://github.com/96528025/NemoClaw) | NVIDIA plugin for secure OpenClaw installation |
-| [**OpenCut**](https://github.com/96528025/OpenCut) | Open-source CapCut alternative |
-| [**PyRIT**](https://github.com/96528025/PyRIT) | Microsoft's Python Risk Identification Tool for generative AI systems |
+| [**OpenCut**](https://github.com/96528025/OpenCut) | Open-source video editing project |
+| [**PyRIT**](https://github.com/96528025/PyRIT) | Python Risk Identification Tool for generative AI systems |
 
 ---
 
-## Focus
+## Focus Areas
 
 - Backend systems and infrastructure
 - Real-time data pipelines
