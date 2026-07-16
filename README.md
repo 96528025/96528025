@@ -2,8 +2,6 @@
 
 Backend systems, real-time data pipelines, applied-AI tools, and automation projects.
 
-This profile is intentionally project-first. It does not include personal background, social links, location, education, contact details, or identity-specific information.
-
 ---
 
 ## Featured Projects
