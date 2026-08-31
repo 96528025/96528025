@@ -22,13 +22,13 @@ exponential backoff and dead-letter handling, PostgreSQL as authoritative state.
 publishes SHA-tagged images to GHCR; Helm deploy validated on an ephemeral KinD cluster.
 `Go` `Redis Streams` `PostgreSQL` `Kubernetes` `Helm`
 
-**[Paris Kart](https://github.com/96528025/sf-kart-game)** — Browser 3D racing game with a
-complete three-lap race loop, drift and mini-boost mechanics, and asynchronous GLB loading.
-Frame-rate-independent vehicle dynamics decomposing velocity into longitudinal and lateral
-components; CI-gated headless harness that reuses production physics and collision code to
-verify three laps and eight ordered checkpoints with zero wall-collision frames.
-[Design notes →](https://github.com/96528025/paris-kart-design)
-`JavaScript` `Three.js` `WebGL` `Vite`
+**[nearby-10min-map](https://nearby-10min-map.onrender.com)** — Deployed geospatial web app
+that turns an address into a map of facilities within an approximate 10-minute drive. A
+React and TypeScript client renders an equal-area circle derived from a Valhalla drive-time
+isochrone while FastAPI coordinates OpenStreetMap and Overture enrichment, explicit degraded
+states, request cancellation, and bounded polling. CI runs 178 offline backend checks,
+43 component tests, and mocked Playwright workflows without calling public upstream APIs.
+`React` `TypeScript` `FastAPI` `Leaflet` `Playwright`
 
 ## Open Source
 
