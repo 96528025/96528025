@@ -9,10 +9,11 @@ and the tests that prove they hold.
 ## Selected Work
 
 **[distributed-kv](https://github.com/96528025/distributed-kv)** — Sharded key-value store in
-Python. Independent Raft consensus groups, quorum-based linearizable reads that reject stale
-leaders, cross-shard transactions via two-phase commit, and write-ahead-log recovery.
-Benchmarked at ~2,400 linearizable reads/sec and 700 writes/sec on a three-node cluster;
-115 automated checks with live failure injection.
+Python. One independent replicated-log group per shard built on selected Raft mechanisms,
+quorum-validated leader reads that reject isolated stale leaders, cross-shard transactions
+over a failure-free two-phase-commit path, and an opt-in WAL that recovers locally applied
+state across process crashes. 115 automated checks in CI with live SIGSTOP/SIGKILL failure
+injection and storage corruption.
 `Python` `Raft` `sharding` `2PC` `WAL`
 
 **[MetroRide](https://github.com/96528025/MetroRide)** — Six-service Go ride-dispatch platform
