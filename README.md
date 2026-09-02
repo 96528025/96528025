@@ -12,7 +12,7 @@ and the tests that prove they hold.
 Python. One independent replicated-log group per shard built on selected Raft mechanisms,
 quorum-validated leader reads that reject isolated stale leaders, cross-shard transactions
 over a failure-free two-phase-commit path, and an opt-in WAL that recovers locally applied
-state across process crashes. 115 automated checks in CI with live SIGSTOP/SIGKILL failure
+state across process crashes. 128 automated checks in CI with live SIGSTOP/SIGKILL failure
 injection and storage corruption.
 `Python` `Raft` `sharding` `2PC` `WAL`
 
