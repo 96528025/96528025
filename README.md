@@ -1,43 +1,69 @@
 # Freja Ren
 
-Backend and distributed systems engineer.
-M.S. Artificial Intelligence, Northeastern University · Sunnyvale, CA · [LinkedIn](https://linkedin.com/in/frejar)
+Software engineer building reliable distributed, backend, and full-stack systems.
 
-I build systems that stay correct under failure — consensus, event-driven pipelines,
-and the tests that prove they hold.
+M.S. Artificial Intelligence, Northeastern University *(expected May 2028)* ·
+Sunnyvale, California · [LinkedIn](https://linkedin.com/in/frejar)
 
-## Selected Work
+I care about systems whose claims can be tested: correctness under failure,
+observable asynchronous workflows, and interfaces that remain clear when dependencies fail.
 
-**[distributed-kv](https://github.com/96528025/distributed-kv)** — Sharded key-value store in
-Python. One independent replicated-log group per shard built on selected Raft mechanisms,
-quorum-validated leader reads that reject isolated stale leaders, cross-shard transactions
-over a failure-free two-phase-commit path, and an opt-in WAL that recovers locally applied
-state across process crashes. 128 automated checks in CI with live SIGSTOP/SIGKILL failure
-injection and storage corruption.
-`Python` `Raft` `sharding` `2PC` `WAL`
+## Featured Engineering Projects
 
-**[MetroRide](https://github.com/96528025/MetroRide)** — Six-service Go ride-dispatch platform
-separating synchronous intake from asynchronous assignment. Redis Streams consumer groups for
-horizontally scalable workers, idempotent dispatch with bounded timeouts, three-attempt
-exponential backoff and dead-letter handling, PostgreSQL as authoritative state. CI/CD
-publishes SHA-tagged images to GHCR; Helm deploy validated on an ephemeral KinD cluster.
-`Go` `Redis Streams` `PostgreSQL` `Kubernetes` `Helm`
+### [distributed-kv](https://github.com/96528025/distributed-kv)
 
-**[nearby-10min-map](https://nearby-10min-map.onrender.com)** — Deployed geospatial web app
-that turns an address into a map of facilities within an approximate 10-minute drive. A
-React and TypeScript client renders an equal-area circle derived from a Valhalla drive-time
-isochrone while FastAPI coordinates OpenStreetMap and Overture enrichment, explicit degraded
-states, request cancellation, and bounded polling. CI runs 178 offline backend checks,
-43 component tests, and mocked Playwright workflows without calling public upstream APIs.
-`React` `TypeScript` `FastAPI` `Leaflet` `Playwright`
+From-scratch Python key-value store that assigns each shard an independent replicated-log
+group built on selected Raft mechanisms. It implements durable election hard state,
+majority-acknowledged writes, quorum-validated leader reads, snapshot catch-up, batched
+writes, and a checksummed WAL with atomic checkpoints.
 
-## Open Source
+- **Evidence:** 128 checks across seven suites, including live `SIGSTOP`/`SIGKILL`, restart,
+  stale-leader, torn-WAL, and storage-corruption scenarios.
+- **Scope:** an experimental correctness project—not a claim of complete Raft or a
+  production database. Open safety gaps are documented alongside the verified behavior.
+- **Explore:** [architecture](https://github.com/96528025/distributed-kv/blob/main/docs/ARCHITECTURE.md) ·
+  [correctness log](https://github.com/96528025/distributed-kv/blob/main/docs/RAFT_CORRECTNESS.md)
+
+`Python` `distributed systems` `Raft` `sharding` `WAL` `failure injection`
+
+### [MetroRide](https://github.com/96528025/MetroRide)
+
+Event-driven ride-dispatch backend composed of six Go services. PostgreSQL owns ride and
+assignment state, while Redis Streams connects asynchronous dispatch and notification
+workflows. The implementation includes guarded duplicate-safe assignment, bounded dependency
+deadlines, retry exhaustion, dead-letter handling, structured logs, and Prometheus metrics.
+
+- **Evidence:** running-stack smoke and integration tests cover end-to-end assignment,
+  duplicate delivery, and a real routing outage.
+- **Delivery:** CI builds six non-root images, publishes immutable commit-SHA artifacts on
+  trusted runs, installs the Helm release in an ephemeral KinD cluster, and drives a ride
+  through the deployed system.
+- **Explore:** [system design](https://github.com/96528025/MetroRide/blob/main/docs/system-design.md) ·
+  [reliability](https://github.com/96528025/MetroRide/blob/main/docs/reliability.md)
+
+`Go` `Redis Streams` `PostgreSQL` `Docker` `Kubernetes` `Helm`
+
+### [nearby-10min-map](https://github.com/96528025/nearby-10min-map)
+
+Deployed React, TypeScript, and FastAPI application that turns a confirmed destination into
+a model-estimated 10-minute driving area. It renders the routed Valhalla isochrone directly,
+uses the same Polygon/MultiPolygon for display and POI filtering, and enriches OpenStreetMap
+facilities with Overture Places in a resilient two-phase workflow.
+
+- **Product:** typed UI states, request cancellation, generation guards, bounded polling,
+  visible data provenance, and useful OSM-only or fixed-radius degraded modes.
+- **Evidence:** 266 deterministic checks—213 pytest, 51 Vitest/React Testing Library, and
+  two Playwright workflows—with network-independent CI.
+- **Try it:** [live demo](https://nearby-10min-map.onrender.com) ·
+  [current architecture](https://github.com/96528025/nearby-10min-map#architecture)
+
+`React` `TypeScript` `FastAPI` `geospatial` `Leaflet` `Playwright`
+
+## Open Source & Research
 
 - **NVIDIA/NemoClaw** — [PR #378](https://github.com/NVIDIA/NemoClaw/pull/378) *(merged)*:
   installation troubleshooting documentation for Node.js versions, Docker daemon startup,
   npm permissions, and port conflicts. Closes [#364](https://github.com/NVIDIA/NemoClaw/issues/364).
-
-## Publication
 
 *A Comparison of LLM Finetuning Methods & Evaluation Metrics with Travel Chatbot Use Case* —
 [arXiv:2408.03562](https://arxiv.org/abs/2408.03562) (2024, published as Angel Ren)
@@ -62,7 +88,6 @@ states, request cancellation, and bounded polling. CI runs 178 offline backend c
 **Applications & Interfaces**
 [carebound](https://github.com/96528025/carebound) ·
 [hanyue](https://github.com/96528025/hanyue) ·
-[nearby-10min-map](https://github.com/96528025/nearby-10min-map) ·
 [landingmate](https://github.com/96528025/landingmate) ·
 [publishsafe](https://github.com/96528025/publishsafe) ·
 [ad-landing-risk-analyzer](https://github.com/96528025/ad-landing-risk-analyzer) ·
