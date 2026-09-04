@@ -73,16 +73,13 @@ facilities with Overture Places in a resilient two-phase workflow.
 **Data & ML**
 [TeenSafe-EvalOps](https://github.com/96528025/TeenSafe-EvalOps) ·
 [ads-ranking-pipeline](https://github.com/96528025/ads-ranking-pipeline) ·
-[amazon-beauty-rec](https://github.com/96528025/amazon-beauty-rec) ·
 [realtime-clickstream-pipeline](https://github.com/96528025/realtime-clickstream-pipeline) ·
 [ecommerce-etl-sql-pipeline](https://github.com/96528025/ecommerce-etl-sql-pipeline) ·
 [ecommerce-analytics-pipeline](https://github.com/96528025/ecommerce-analytics-pipeline)
 
 **Backend & Tooling**
 [spring-ai-knowledge-assistant](https://github.com/96528025/spring-ai-knowledge-assistant) ·
-[llm-serving-infra-simulator](https://github.com/96528025/llm-serving-infra-simulator) ·
 [smart-job-platform](https://github.com/96528025/smart-job-platform) ·
-[AdPulse](https://github.com/96528025/AdPulse) ·
 [ad-quality-automation-platform](https://github.com/96528025/ad-quality-automation-platform)
 
 **Applications & Interfaces**
