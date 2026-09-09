@@ -10,6 +10,29 @@ observable asynchronous workflows, and interfaces that remain clear when depende
 
 ## Featured Engineering Projects
 
+### [ai-roundtable](https://github.com/96528025/ai-roundtable)
+
+Next.js 15 (App Router), React 19 and TypeScript application, deployed on Vercel, that turns a
+product idea into a decision brief. The default Quick Brief is a bounded two-call workflow
+(Planner, then brief writer) with a four-attempt hard budget shared by transport retries and
+malformed-output recovery, strict runtime validation of the output contract on both server and
+browser, and a typed error contract that never surfaces upstream detail to the page.
+
+- **Evidence:** a five-case paired evaluation found the original 16-call, five-persona roundtable
+  used 37.9× the tokens and 7.0× the wall-clock time of a one-call control while the structural
+  rubric did not separate them, so it was demoted to an optional baseline. The rubric's
+  saturation and the run's dirty working tree are recorded next to the numbers, and the
+  evaluation-harness defect that silently discarded 40% of runs is written up as an incident.
+- **Verification:** four CI checks (typecheck, lint, Vitest + Playwright, build) on Node 22 with
+  provider access disabled; Playwright drives the production build in Chromium and axe-core scans
+  the form, loading, success and error states. The public demo runs in sample-only mode and
+  rejects model-backed routes server-side with `403`.
+- **Explore:** [live sample](https://ai-roundtable-mu.vercel.app) ·
+  [incident write-up](https://github.com/96528025/ai-roundtable/blob/main/docs/2026-08-04-moderator-truncation.md) ·
+  [client cancellation and error contract](https://github.com/96528025/ai-roundtable/blob/main/docs/2026-09-02-client-cancellation-and-error-contract.md)
+
+`TypeScript` `Next.js` `React` `Vercel` `Playwright` `LLM evaluation`
+
 ### [distributed-kv](https://github.com/96528025/distributed-kv)
 
 From-scratch Python key-value store that assigns each shard an independent replicated-log
@@ -47,29 +70,6 @@ reclaims abandoned stream entries with `XAUTOCLAIM`, dead-lettering poison messa
   [reliability](https://github.com/96528025/MetroRide/blob/main/docs/reliability.md)
 
 `Go` `Java` `Spring Boot` `Redis Streams` `PostgreSQL` `Docker` `Kubernetes` `Helm`
-
-### [ai-roundtable](https://github.com/96528025/ai-roundtable)
-
-Next.js 15 (App Router), React 19 and TypeScript application, deployed on Vercel, that turns a
-product idea into a decision brief. The default Quick Brief is a bounded two-call workflow
-(Planner, then brief writer) with a four-attempt hard budget shared by transport retries and
-malformed-output recovery, strict runtime validation of the output contract on both server and
-browser, and a typed error contract that never surfaces upstream detail to the page.
-
-- **Evidence:** a five-case paired evaluation found the original 16-call, five-persona roundtable
-  used 37.9× the tokens and 7.0× the wall-clock time of a one-call control while the structural
-  rubric did not separate them, so it was demoted to an optional baseline. The rubric's
-  saturation and the run's dirty working tree are recorded next to the numbers, and the
-  evaluation-harness defect that silently discarded 40% of runs is written up as an incident.
-- **Verification:** four CI checks (typecheck, lint, Vitest + Playwright, build) on Node 22 with
-  provider access disabled; Playwright drives the production build in Chromium and axe-core scans
-  the form, loading, success and error states. The public demo runs in sample-only mode and
-  rejects model-backed routes server-side with `403`.
-- **Explore:** [live sample](https://ai-roundtable-mu.vercel.app) ·
-  [incident write-up](https://github.com/96528025/ai-roundtable/blob/main/docs/2026-08-04-moderator-truncation.md) ·
-  [client cancellation and error contract](https://github.com/96528025/ai-roundtable/blob/main/docs/2026-09-02-client-cancellation-and-error-contract.md)
-
-`TypeScript` `Next.js` `React` `Vercel` `Playwright` `LLM evaluation`
 
 ### [nearby-10min-map](https://github.com/96528025/nearby-10min-map)
 
