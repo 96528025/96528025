@@ -40,7 +40,7 @@ group built on selected Raft mechanisms. It implements durable election hard sta
 majority-acknowledged writes, quorum-validated leader reads, snapshot catch-up, batched
 writes, and a checksummed WAL with atomic checkpoints.
 
-- **Evidence:** 128 checks across seven suites, including live `SIGSTOP`/`SIGKILL`, restart,
+- **Evidence:** 146 checks across nine suites, including live `SIGSTOP`/`SIGKILL`, restart,
   stale-leader, torn-WAL, and storage-corruption scenarios.
 - **Scope:** an experimental correctness project—not a claim of complete Raft or a
   production database. Open safety gaps are documented alongside the verified behavior.
