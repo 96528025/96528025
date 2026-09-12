@@ -1,121 +1,112 @@
 # Freja Ren
 
-Software engineer building reliable distributed, backend, and full-stack systems.
+**Software Engineer · Backend, Cloud Infrastructure & Full-Stack**
 
-M.S. Artificial Intelligence, Northeastern University *(expected May 2028)* ·
-Sunnyvale, California · [LinkedIn](https://linkedin.com/in/frejar)
+I build backend services and interactive applications, with a focus on failure recovery,
+data correctness, and clear user experiences. I'm interested in backend, cloud,
+infrastructure, and full-stack engineering opportunities.
 
-I care about systems whose claims can be tested: correctness under failure,
-observable asynchronous workflows, and interfaces that remain clear when dependencies fail.
+M.S. Artificial Intelligence, Northeastern University · Expected May 2028  
+Sunnyvale, California · [LinkedIn / Contact](https://www.linkedin.com/in/frejar/)
 
-## Featured Engineering Projects
+## Selected projects
 
-### [ai-roundtable](https://github.com/96528025/ai-roundtable)
+**Backend & infrastructure:** MetroRide, Distributed KV  
+**Full-stack applications:** Nearby Map, AI Roundtable  
+**Interactive systems:** Paris Kart / SF Kart
 
-Next.js 15 (App Router), React 19 and TypeScript application, deployed on Vercel, that turns a
-product idea into a decision brief. The default Quick Brief is a bounded two-call workflow
-(Planner, then brief writer) with a four-attempt hard budget shared by transport retries and
-malformed-output recovery, strict runtime validation of the output contract on both server and
-browser, and a typed error contract that never surfaces upstream detail to the page.
+### [MetroRide](https://github.com/96528025/MetroRide) · Event-driven backend & deployment
 
-- **Evidence:** a five-case paired evaluation found the original 16-call, five-persona roundtable
-  used 37.9× the tokens and 7.0× the wall-clock time of a one-call control while the structural
-  rubric did not separate them, so it was demoted to an optional baseline. The rubric's
-  saturation and the run's dirty working tree are recorded next to the numbers, and the
-  evaluation-harness defect that silently discarded 40% of runs is written up as an incident.
-- **Verification:** four CI checks (typecheck, lint, Vitest + Playwright, build) on Node 22 with
-  provider access disabled; Playwright drives the production build in Chromium and axe-core scans
-  the form, loading, success and error states. The public demo runs in sample-only mode and
-  rejects model-backed routes server-side with `403`.
-- **Explore:** [live sample](https://ai-roundtable-mu.vercel.app) ·
-  [incident write-up](https://github.com/96528025/ai-roundtable/blob/main/docs/2026-08-04-moderator-truncation.md) ·
-  [client cancellation and error contract](https://github.com/96528025/ai-roundtable/blob/main/docs/2026-09-02-client-cancellation-and-error-contract.md)
+A ride-dispatch backend with six core Go services and an optional Java/Spring Boot fare
+service. PostgreSQL transactions and an outbox connect ride state to Redis Streams;
+conditional state changes and a double-entry ledger protect assignment and settlement
+from duplicate processing.
 
-`TypeScript` `Next.js` `React` `Vercel` `Playwright` `LLM evaluation`
+- **Engineering:** transactional outbox, event deduplication, pending-message recovery in
+  the fare consumer, structured logs, and Prometheus/Grafana observability.
+- **Evidence:** outage and process-recovery tests, Java Testcontainers integration tests,
+  and CI that installs the six core services through Helm into a disposable KinD cluster.
 
-### [distributed-kv](https://github.com/96528025/distributed-kv)
+`Go` `Java` `Spring Boot` `PostgreSQL` `Redis Streams` `Docker` `Kubernetes` `Helm`
 
-From-scratch Python key-value store that assigns each shard an independent replicated-log
-group built on selected Raft mechanisms. It implements durable election hard state,
-majority-acknowledged writes, quorum-validated leader reads, snapshot catch-up, batched
-writes, and a checksummed WAL with atomic checkpoints.
+[Architecture & verification](https://github.com/96528025/MetroRide#readme) ·
+[Fare ledger](https://github.com/96528025/MetroRide/tree/main/services/fare-service)
 
-- **Evidence:** 146 checks across nine suites, including live `SIGSTOP`/`SIGKILL`, restart,
-  stale-leader, torn-WAL, and storage-corruption scenarios.
-- **Scope:** an experimental correctness project—not a claim of complete Raft or a
-  production database. Open safety gaps are documented alongside the verified behavior.
-- **Explore:** [architecture](https://github.com/96528025/distributed-kv/blob/main/docs/ARCHITECTURE.md) ·
-  [correctness log](https://github.com/96528025/distributed-kv/blob/main/docs/RAFT_CORRECTNESS.md)
+### [Distributed KV](https://github.com/96528025/distributed-kv) · Replication & storage recovery
 
-`Python` `distributed systems` `Raft` `sharding` `WAL` `failure injection`
+A three-process, Raft-style key-value store built with Python's standard library.
+Per-shard leaders coordinate batched replication and quorum-validated reads; a
+checksummed write-ahead log and atomic checkpoints recover committed data.
 
-### [MetroRide](https://github.com/96528025/MetroRide)
+- **Engineering:** leader election, durable term/vote state, ordered application,
+  snapshot catch-up, and dependency-free Prometheus metrics.
+- **Evidence:** 146 checks across nine suites, including real-process leader suspension,
+  crashes, restart, and disk corruption. The implemented Raft subset and remaining
+  correctness gaps are documented explicitly.
 
-Event-driven ride-dispatch backend: six core Go services plus an optional Java 21 / Spring Boot
-fare service. PostgreSQL owns ride and assignment state, Redis Streams carries the asynchronous
-dispatch and notification workflow, and state changes are committed together with the events
-announcing them through a transactional outbox (`FOR UPDATE SKIP LOCKED` relay). Dispatch is an
-idempotent consumer with bounded dependency deadlines, three-attempt retries and a dead-letter
-stream; the fare service records each event once, posts a balanced double-entry ledger, and
-reclaims abandoned stream entries with `XAUTOCLAIM`, dead-lettering poison messages.
+`Python` `Distributed systems` `Replication` `WAL` `Failure injection`
 
-- **Evidence:** running-stack tests cover end-to-end assignment, duplicate delivery, a routing
-  outage, a Redis outage, and a `SIGKILL` of rider-service with an unpublished outbox row that the
-  restarted relay publishes exactly once. Go unit tests run under the race detector; the Java
-  service has Testcontainers integration tests against real PostgreSQL and Redis.
-- **Delivery:** CI builds six non-root images, publishes immutable commit-SHA artifacts on
-  trusted runs, installs the Helm release in an ephemeral KinD cluster, and drives a ride
-  through the deployed system.
-- **Explore:** [system design](https://github.com/96528025/MetroRide/blob/main/docs/system-design.md) ·
-  [reliability](https://github.com/96528025/MetroRide/blob/main/docs/reliability.md)
+[Request flow & storage design](https://github.com/96528025/distributed-kv/blob/main/docs/ARCHITECTURE.md) ·
+[Correctness investigations](https://github.com/96528025/distributed-kv/blob/main/docs/RAFT_CORRECTNESS.md)
 
-`Go` `Java` `Spring Boot` `Redis Streams` `PostgreSQL` `Docker` `Kubernetes` `Helm`
+### [Nearby 10-Minute Map](https://github.com/96528025/nearby-10min-map) · Geospatial full-stack application
 
-### [nearby-10min-map](https://github.com/96528025/nearby-10min-map)
+A React and FastAPI application for exploring a destination's model-estimated ten-minute
+driving area. The backend combines routing geometry, OpenStreetMap facilities, and
+background Overture enrichment; the UI keeps useful results visible as data arrives.
 
-Deployed React, TypeScript, and FastAPI application that turns a confirmed destination into
-a model-estimated 10-minute driving area. It renders the routed Valhalla isochrone directly,
-uses the same Polygon/MultiPolygon for display and POI filtering, and enriches OpenStreetMap
-facilities with Overture Places in a resilient two-phase workflow.
+- **Engineering:** shared geometry for display and filtering, typed UI states, cancellation,
+  stale-response protection, bounded polling, and a single Docker deployment on Render.
+- **Evidence:** a preregistered five-location benchmark motivated replacing a circle
+  approximation with the routed polygon; offline backend, frontend, and browser tests
+  cover geometry and degraded workflows.
 
-- **Product:** typed UI states, request cancellation, generation guards, bounded polling,
-  visible data provenance, and useful OSM-only or fixed-radius degraded modes.
-- **Evidence:** 266 deterministic checks—213 pytest, 51 Vitest/React Testing Library, and
-  two Playwright workflows—with network-independent CI.
-- **Try it:** [live demo](https://nearby-10min-map.onrender.com) ·
-  [current architecture](https://github.com/96528025/nearby-10min-map#architecture)
+`React` `TypeScript` `Python` `FastAPI` `Leaflet` `Docker` `Render`
 
-`React` `TypeScript` `FastAPI` `geospatial` `Leaflet` `Playwright`
+[Try the map](https://nearby-10min-map.onrender.com/) ·
+[Geometry benchmark](https://github.com/96528025/nearby-10min-map/blob/main/reports/accuracy/runs/20260729T082833Z_cfge03df09d_pland796c05b/report.md)
 
-## Open Source & Research
+### [AI Roundtable](https://github.com/96528025/ai-roundtable) · Full-stack AI workflow
 
-- **NVIDIA/NemoClaw** — [PR #378](https://github.com/NVIDIA/NemoClaw/pull/378) *(merged)*:
-  installation troubleshooting documentation for Node.js versions, Docker daemon startup,
-  npm permissions, and port conflicts. Closes [#364](https://github.com/NVIDIA/NemoClaw/issues/364).
+A Next.js application that turns a product idea into a decision brief, MVP scope, and
+validation plan. The default Planner → Writer workflow normally uses two model calls,
+with a shared four-attempt budget for retries and output recovery.
 
-*A Comparison of LLM Finetuning Methods & Evaluation Metrics with Travel Chatbot Use Case* —
-[arXiv:2408.03562](https://arxiv.org/abs/2408.03562) (2024, published as Angel Ren)
+- **Engineering:** server/browser runtime contracts, explicit evidence gaps when no
+  research was performed, response-body timeouts, and cancellation-aware UI behavior.
+- **Evidence:** a paired evaluation of the original fixed roundtable and a one-call
+  control informed the product redesign. Offline contract tests and mocked-API browser
+  tests cover the application; the public demo is sample-only.
 
-## More Projects
+`TypeScript` `Next.js` `React` `Node.js` `Vitest` `Playwright` `Vercel`
 
-**Data & ML**
-[TeenSafe-EvalOps](https://github.com/96528025/TeenSafe-EvalOps) ·
-[ads-ranking-pipeline](https://github.com/96528025/ads-ranking-pipeline) ·
-[realtime-clickstream-pipeline](https://github.com/96528025/realtime-clickstream-pipeline) ·
-[ecommerce-etl-sql-pipeline](https://github.com/96528025/ecommerce-etl-sql-pipeline) ·
-[ecommerce-analytics-pipeline](https://github.com/96528025/ecommerce-analytics-pipeline)
+[View the sample](https://ai-roundtable-mu.vercel.app/) ·
+[Evaluation & methodology](https://github.com/96528025/ai-roundtable#evaluation-what-changed-and-what-the-evidence-supports)
 
-**Backend & Tooling**
-[spring-ai-knowledge-assistant](https://github.com/96528025/spring-ai-knowledge-assistant) ·
-[smart-job-platform](https://github.com/96528025/smart-job-platform) ·
-[ad-quality-automation-platform](https://github.com/96528025/ad-quality-automation-platform)
+### [Paris Kart / SF Kart](https://github.com/96528025/sf-kart-game) · Interactive 3D systems
 
-**Applications & Interfaces**
-[carebound](https://github.com/96528025/carebound) ·
-[hanyue](https://github.com/96528025/hanyue) ·
-[landingmate](https://github.com/96528025/landingmate) ·
-[publishsafe](https://github.com/96528025/publishsafe) ·
-[ad-landing-risk-analyzer](https://github.com/96528025/ad-landing-risk-analyzer) ·
-[freja-ai-os](https://github.com/96528025/freja-ai-os) ·
-[freja-input](https://github.com/96528025/freja-input) ·
-[baozi-gesture-game](https://github.com/96528025/baozi-gesture-game)
+A browser kart racer with a playable Paris release: three-lap races, ordered checkpoints,
+drifting, power-ups, pause/restart, and a results screen. An experimental SF circuit reuses
+the underlying game systems while keeping the Paris release available separately.
+
+- **Engineering:** custom vehicle behavior, race-state management, cel/outline shaders,
+  and asynchronous GLB assets with primitive fallbacks.
+- **Evidence:** the SF headless harness reuses browser vehicle/collision modules to check
+  laps, checkpoint order, and track boundaries. Correctness gates and gameplay-design
+  scores are separate; SF remains a prototype.
+
+`JavaScript` `Three.js` `GLSL` `Vite` `Simulation tooling`
+
+[Play Paris Kart](https://fj-paris-kart.netlify.app/) ·
+[Track verification tools](https://github.com/96528025/sf-kart-game/tree/main/tools/track-verify) ·
+[Preserved Paris release](https://github.com/96528025/sf-kart-game/tree/paris-tuileries-v1.0-final)
+
+## Open source & research
+
+- **NVIDIA/NemoClaw:** [merged documentation contribution, PR #378](https://github.com/NVIDIA/NemoClaw/pull/378),
+  covering installation troubleshooting for Node.js, Docker, npm permissions, and port conflicts.
+- **Research:** co-author of [A Comparison of LLM Finetuning Methods & Evaluation Metrics with Travel Chatbot Use Case](https://arxiv.org/abs/2408.03562)
+  (arXiv, 2024; author name **Angel Ren**).
+
+[All repositories](https://github.com/96528025?tab=repositories) ·
+[Connect on LinkedIn](https://www.linkedin.com/in/frejar/)
