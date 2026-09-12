@@ -1,7 +1,7 @@
 # Freja Ren
 
 **Seeking Summer 2027 Software Engineering Internships**  
-Backend · Cloud & Infrastructure · Full-Stack | California
+Backend · Cloud & Infrastructure · Full-Stack | Bay Area, California
 
 I build backend systems and interactive applications, with a focus on data correctness,
 failure recovery, and clear user experiences.
