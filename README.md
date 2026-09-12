@@ -6,8 +6,7 @@ I build backend services and interactive applications, with a focus on failure r
 data correctness, and clear user experiences. I'm interested in backend, cloud,
 infrastructure, and full-stack engineering opportunities.
 
-M.S. Artificial Intelligence, Northeastern University · Expected May 2028  
-Sunnyvale, California · [LinkedIn / Contact](https://www.linkedin.com/in/frejar/)
+California
 
 ## Selected projects
 
@@ -108,5 +107,4 @@ the underlying game systems while keeping the Paris release available separately
 - **Research:** co-author of [A Comparison of LLM Finetuning Methods & Evaluation Metrics with Travel Chatbot Use Case](https://arxiv.org/abs/2408.03562)
   (arXiv, 2024; author name **Angel Ren**).
 
-[All repositories](https://github.com/96528025?tab=repositories) ·
-[Connect on LinkedIn](https://www.linkedin.com/in/frejar/)
+[All repositories](https://github.com/96528025?tab=repositories)
