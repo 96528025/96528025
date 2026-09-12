@@ -1,110 +1,81 @@
 # Freja Ren
 
-**Software Engineer · Backend, Cloud Infrastructure & Full-Stack**
+**Seeking Summer 2027 Software Engineering Internships**  
+Backend · Cloud & Infrastructure · Full-Stack | California
 
-I build backend services and interactive applications, with a focus on failure recovery,
-data correctness, and clear user experiences. I'm interested in backend, cloud,
-infrastructure, and full-stack engineering opportunities.
-
-California
+I build backend systems and interactive applications, with a focus on data correctness,
+failure recovery, and clear user experiences.
 
 ## Selected projects
 
-**Backend & infrastructure:** MetroRide, Distributed KV  
-**Full-stack applications:** Nearby Map, AI Roundtable  
-**Interactive systems:** Paris Kart / SF Kart
+### [MetroRide](https://github.com/96528025/MetroRide) · Event-driven backend
 
-### [MetroRide](https://github.com/96528025/MetroRide) · Event-driven backend & deployment
+A ride-dispatch backend with six Go services and an optional Java fare service.
+**Duplicate-safe processing** combines a transactional outbox with guarded state changes
+and a balanced fare ledger. Recovery tests and a Helm deployment in CI exercise the system.
 
-A ride-dispatch backend with six core Go services and an optional Java/Spring Boot fare
-service. PostgreSQL transactions and an outbox connect ride state to Redis Streams;
-conditional state changes and a double-entry ledger protect assignment and settlement
-from duplicate processing.
+`Go` `Java / Spring Boot` `PostgreSQL` `Redis Streams` `Docker` `Kubernetes / Helm`
 
-- **Engineering:** transactional outbox, event deduplication, pending-message recovery in
-  the fare consumer, structured logs, and Prometheus/Grafana observability.
-- **Evidence:** outage and process-recovery tests, Java Testcontainers integration tests,
-  and CI that installs the six core services through Helm into a disposable KinD cluster.
+[Architecture & verification](https://github.com/96528025/MetroRide#readme)
 
-`Go` `Java` `Spring Boot` `PostgreSQL` `Redis Streams` `Docker` `Kubernetes` `Helm`
-
-[Architecture & verification](https://github.com/96528025/MetroRide#readme) ·
-[Fare ledger](https://github.com/96528025/MetroRide/tree/main/services/fare-service)
-
-### [Distributed KV](https://github.com/96528025/distributed-kv) · Replication & storage recovery
+### [Distributed KV](https://github.com/96528025/distributed-kv) · Replication & recovery
 
 A three-process, Raft-style key-value store built with Python's standard library.
-Per-shard leaders coordinate batched replication and quorum-validated reads; a
-checksummed write-ahead log and atomic checkpoints recover committed data.
+**Correctness under failure** is the focus: 146 checks cover replication, leader suspension,
+crashes, restart, and storage corruption. The implemented Raft subset and open safety gaps
+are documented alongside the results.
 
-- **Engineering:** leader election, durable term/vote state, ordered application,
-  snapshot catch-up, and dependency-free Prometheus metrics.
-- **Evidence:** 146 checks across nine suites, including real-process leader suspension,
-  crashes, restart, and disk corruption. The implemented Raft subset and remaining
-  correctness gaps are documented explicitly.
+`Python` `Replicated logs` `WAL` `Checkpoints` `Failure injection`
 
-`Python` `Distributed systems` `Replication` `WAL` `Failure injection`
-
-[Request flow & storage design](https://github.com/96528025/distributed-kv/blob/main/docs/ARCHITECTURE.md) ·
+[Architecture](https://github.com/96528025/distributed-kv/blob/main/docs/ARCHITECTURE.md) ·
 [Correctness investigations](https://github.com/96528025/distributed-kv/blob/main/docs/RAFT_CORRECTNESS.md)
 
-### [Nearby 10-Minute Map](https://github.com/96528025/nearby-10min-map) · Geospatial full-stack application
+### [Nearby 10-Minute Map](https://github.com/96528025/nearby-10min-map) · Geospatial full-stack app
 
-A React and FastAPI application for exploring a destination's model-estimated ten-minute
-driving area. The backend combines routing geometry, OpenStreetMap facilities, and
-background Overture enrichment; the UI keeps useful results visible as data arrives.
+Explore a destination's model-estimated ten-minute driving area and nearby facilities.
+**One routed boundary drives both the map and result filtering**, replacing a circle
+approximation after a five-location benchmark. Background enrichment and degraded modes
+keep results useful when external data is incomplete.
 
-- **Engineering:** shared geometry for display and filtering, typed UI states, cancellation,
-  stale-response protection, bounded polling, and a single Docker deployment on Render.
-- **Evidence:** a preregistered five-location benchmark motivated replacing a circle
-  approximation with the routed polygon; offline backend, frontend, and browser tests
-  cover geometry and degraded workflows.
-
-`React` `TypeScript` `Python` `FastAPI` `Leaflet` `Docker` `Render`
+`React` `TypeScript` `FastAPI` `Leaflet` `Docker / Render`
 
 [Try the map](https://nearby-10min-map.onrender.com/) ·
-[Geometry benchmark](https://github.com/96528025/nearby-10min-map/blob/main/reports/accuracy/runs/20260729T082833Z_cfge03df09d_pland796c05b/report.md)
+[Implementation & benchmark](https://github.com/96528025/nearby-10min-map#readme)
 
 ### [AI Roundtable](https://github.com/96528025/ai-roundtable) · Full-stack AI workflow
 
-A Next.js application that turns a product idea into a decision brief, MVP scope, and
-validation plan. The default Planner → Writer workflow normally uses two model calls,
-with a shared four-attempt budget for retries and output recovery.
+Turn a product idea into a decision brief, MVP scope, and validation plan.
+**Evaluation informed a simpler design:** the default Planner → Writer workflow replaced
+a fixed 16-call roundtable. Runtime validation and a shared four-attempt budget bound
+output recovery and retries. The public demo is sample-only.
 
-- **Engineering:** server/browser runtime contracts, explicit evidence gaps when no
-  research was performed, response-body timeouts, and cancellation-aware UI behavior.
-- **Evidence:** a paired evaluation of the original fixed roundtable and a one-call
-  control informed the product redesign. Offline contract tests and mocked-API browser
-  tests cover the application; the public demo is sample-only.
-
-`TypeScript` `Next.js` `React` `Node.js` `Vitest` `Playwright` `Vercel`
+`TypeScript` `Next.js / React` `Node.js` `Vitest / Playwright` `Vercel`
 
 [View the sample](https://ai-roundtable-mu.vercel.app/) ·
 [Evaluation & methodology](https://github.com/96528025/ai-roundtable#evaluation-what-changed-and-what-the-evidence-supports)
 
 ### [Paris Kart / SF Kart](https://github.com/96528025/sf-kart-game) · Interactive 3D systems
 
-A browser kart racer with a playable Paris release: three-lap races, ordered checkpoints,
-drifting, power-ups, pause/restart, and a results screen. An experimental SF circuit reuses
-the underlying game systems while keeping the Paris release available separately.
-
-- **Engineering:** custom vehicle behavior, race-state management, cel/outline shaders,
-  and asynchronous GLB assets with primitive fallbacks.
-- **Evidence:** the SF headless harness reuses browser vehicle/collision modules to check
-  laps, checkpoint order, and track boundaries. Correctness gates and gameplay-design
-  scores are separate; SF remains a prototype.
+A playable browser kart racer with three-lap races, drifting, power-ups, and pause/restart.
+**The SF prototype tests track behavior using the browser game's vehicle and collision code.**
+The complete Paris release remains available separately.
 
 `JavaScript` `Three.js` `GLSL` `Vite` `Simulation tooling`
 
 [Play Paris Kart](https://fj-paris-kart.netlify.app/) ·
-[Track verification tools](https://github.com/96528025/sf-kart-game/tree/main/tools/track-verify) ·
-[Preserved Paris release](https://github.com/96528025/sf-kart-game/tree/paris-tuileries-v1.0-final)
+[Track verification](https://github.com/96528025/sf-kart-game/tree/main/tools/track-verify) ·
+[Paris release](https://github.com/96528025/sf-kart-game/tree/paris-tuileries-v1.0-final)
+
+## See the projects
+
+| Nearby 10-Minute Map | Paris Kart |
+| --- | --- |
+| [![Nearby Map screenshot: Apple Park example with a routed driving area and facility layers](https://raw.githubusercontent.com/96528025/nearby-10min-map/9e689563ad4460eb67b1e194deccdd8817896a65/docs/assets/live-demo-complete.jpg)](https://nearby-10min-map.onrender.com/) | [![Paris Kart screenshot: a race in progress with lap and checkpoint indicators](https://raw.githubusercontent.com/96528025/sf-kart-game/5fbfe904fa2b2b1f0b1499764bb98a39f2198130/docs/images/paris-race.jpg)](https://fj-paris-kart.netlify.app/) |
+| Apple Park example: routed area and nearby facilities. | Playable Paris release: three laps, drifting, and power-ups. |
 
 ## Open source & research
 
-- **NVIDIA/NemoClaw:** [merged documentation contribution, PR #378](https://github.com/NVIDIA/NemoClaw/pull/378),
-  covering installation troubleshooting for Node.js, Docker, npm permissions, and port conflicts.
-- **Research:** co-author of [A Comparison of LLM Finetuning Methods & Evaluation Metrics with Travel Chatbot Use Case](https://arxiv.org/abs/2408.03562)
-  (arXiv, 2024; author name **Angel Ren**).
+- **NVIDIA/NemoClaw:** [merged installation-troubleshooting documentation, PR #378](https://github.com/NVIDIA/NemoClaw/pull/378).
+- **Research:** co-author of [A Comparison of LLM Finetuning Methods & Evaluation Metrics with Travel Chatbot Use Case](https://arxiv.org/abs/2408.03562) (arXiv, 2024; author name **Angel Ren**).
 
 [All repositories](https://github.com/96528025?tab=repositories)
