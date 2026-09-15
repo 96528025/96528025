@@ -10,7 +10,7 @@ failure recovery, and clear user experiences.
 
 ### [MetroRide](https://github.com/96528025/MetroRide) · Event-driven backend
 
-A ride-dispatch backend with six Go services and an optional Java fare service.
+A ride-dispatch backend with six core Go services and an optional Java fare service.
 **Duplicate-safe processing** combines a transactional outbox with guarded state changes
 and a balanced fare ledger. Recovery tests and a Helm deployment in CI exercise the system.
 
@@ -21,7 +21,7 @@ and a balanced fare ledger. Recovery tests and a Helm deployment in CI exercise 
 ### [Distributed KV](https://github.com/96528025/distributed-kv) · Replication & recovery
 
 A three-process, Raft-style key-value store built with Python's standard library.
-**Correctness under failure** is the focus: 146 checks cover replication, leader suspension,
+**Correctness under failure** is the focus: 152 checks cover replication, leader suspension,
 crashes, restart, and storage corruption. The implemented Raft subset and open safety gaps
 are documented alongside the results.
 
@@ -70,8 +70,8 @@ The complete Paris release remains available separately.
 
 | Nearby 10-Minute Map | Paris Kart |
 | --- | --- |
-| [![Nearby Map screenshot: Apple Park example with a routed driving area and facility layers](https://raw.githubusercontent.com/96528025/nearby-10min-map/9e689563ad4460eb67b1e194deccdd8817896a65/docs/assets/live-demo-complete.jpg)](https://nearby-10min-map.onrender.com/) | [![Paris Kart screenshot: a race in progress with lap and checkpoint indicators](https://raw.githubusercontent.com/96528025/sf-kart-game/5fbfe904fa2b2b1f0b1499764bb98a39f2198130/docs/images/paris-race.jpg)](https://fj-paris-kart.netlify.app/) |
-| Apple Park example: routed area and nearby facilities. | Playable Paris release: three laps, drifting, and power-ups. |
+| [![Nearby Map screenshot: bundled Apple Park view with the recorded driving area and facility layers](https://raw.githubusercontent.com/96528025/nearby-10min-map/8864745/docs/assets/bundled-snapshot.png)](https://nearby-10min-map.onrender.com/) | [![Paris Kart screenshot: a race in progress with lap and checkpoint indicators](https://raw.githubusercontent.com/96528025/sf-kart-game/5fbfe904fa2b2b1f0b1499764bb98a39f2198130/docs/images/paris-race.jpg)](https://fj-paris-kart.netlify.app/) |
+| Bundled Apple Park view: recorded driving area and nearby facilities. | Playable Paris release: three laps, drifting, and power-ups. |
 
 ## Open source & research
 
