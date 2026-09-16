@@ -54,23 +54,20 @@ output recovery and retries. The public demo is sample-only.
 [View the sample](https://ai-roundtable-mu.vercel.app/) ·
 [Evaluation & methodology](https://github.com/96528025/ai-roundtable#evaluation-what-changed-and-what-the-evidence-supports)
 
-### [Paris Kart / SF Kart](https://github.com/96528025/sf-kart-game) · Interactive 3D systems
+### [Paris Kart](https://fj-paris-kart.netlify.app/) · Interactive 3D systems
 
 A playable browser kart racer with three-lap races, drifting, power-ups, and pause/restart.
-**The SF prototype tests track behavior using the browser game's vehicle and collision code.**
-The complete Paris release remains available separately.
+**Paris Kart is the playable release; SF Circuit v1 is an unreleased track prototype that uses the same vehicle and collision code for simulation testing.**
 
 `JavaScript` `Three.js` `GLSL` `Vite` `Simulation tooling`
 
-[Play Paris Kart](https://fj-paris-kart.netlify.app/) ·
-[Track verification](https://github.com/96528025/sf-kart-game/tree/main/tools/track-verify) ·
-[Paris release](https://github.com/96528025/sf-kart-game/tree/paris-tuileries-v1.0-final)
+[Play Paris Kart](https://fj-paris-kart.netlify.app/)
 
 ## See the projects
 
 | Nearby 10-Minute Map | Paris Kart |
 | --- | --- |
-| [![Nearby Map screenshot: bundled Apple Park view with the recorded driving area and facility layers](https://raw.githubusercontent.com/96528025/nearby-10min-map/8864745/docs/assets/bundled-snapshot.png)](https://nearby-10min-map.onrender.com/) | [![Paris Kart screenshot: a race in progress with lap and checkpoint indicators](https://raw.githubusercontent.com/96528025/sf-kart-game/5fbfe904fa2b2b1f0b1499764bb98a39f2198130/docs/images/paris-race.jpg)](https://fj-paris-kart.netlify.app/) |
+| [![Nearby Map screenshot: bundled Apple Park view with the recorded driving area and facility layers](https://raw.githubusercontent.com/96528025/nearby-10min-map/8864745/docs/assets/bundled-snapshot.png)](https://nearby-10min-map.onrender.com/) | [![Paris Kart screenshot: a race in progress with lap and checkpoint indicators](assets/paris-kart-race.jpg)](https://fj-paris-kart.netlify.app/) |
 | Bundled Apple Park view: recorded driving area and nearby facilities. | Playable Paris release: three laps, drifting, and power-ups. |
 
 ## Open source & research
