@@ -57,7 +57,7 @@ output recovery and retries. The public demo is sample-only.
 ### [Paris Kart](https://fj-paris-kart.netlify.app/) · Interactive 3D systems
 
 A playable browser kart racer with three-lap races, drifting, power-ups, and pause/restart.
-**The SF prototype tests track behavior using the browser game's vehicle and collision code.**
+**Paris Kart is the playable release; SF Circuit v1 is an unreleased track prototype that uses the same vehicle and collision code for simulation testing.**
 
 `JavaScript` `Three.js` `GLSL` `Vite` `Simulation tooling`
 
