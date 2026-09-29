@@ -9,6 +9,10 @@ I build reliable software with an emphasis on correctness, recovery, and testing
 - **[Nearby 10-Minute Map](https://github.com/96528025/nearby-10min-map)** — Geospatial application built with FastAPI, React, TypeScript, and Leaflet.
 - **[AI Roundtable](https://github.com/96528025/ai-roundtable)** — Tested full-stack AI workflow built with Next.js, Node.js, Vitest, and Playwright.
 
+## Also built
+
+- **[Paris Kart](https://fj-paris-kart.netlify.app)** — Browser kart racer set in the Tuileries, built with Three.js. Play it in the browser.
+
 ## Open source
 
 - **NVIDIA/NemoClaw:** [merged installation-troubleshooting documentation, PR #378](https://github.com/NVIDIA/NemoClaw/pull/378).
