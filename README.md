@@ -1,7 +1,5 @@
 # Software Engineering
 
-Backend · Distributed Systems · Full-Stack
-
 I build reliable software with an emphasis on correctness, recovery, and testing.
 
 ## Selected projects
